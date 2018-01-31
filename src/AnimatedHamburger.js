@@ -19,7 +19,7 @@ const AnimatedCircle = Animated.createAnimatedComponent(Circle)
 const WIDTH = Dimensions.get("window").width
 const HEIGHT = Dimensions.get("window").height
 
-const BAR_HEIGHT = 40
+const BAR_HEIGHT = 50
 
 export default class AnimatedHamburger extends React.Component {
 
@@ -111,7 +111,6 @@ export default class AnimatedHamburger extends React.Component {
                 color={"white"}
                 borderColor={"#152d44"}
                 direction={"counter-clockwise"}
-                style={{position: "absolute", right: -52, top: -42}}
             />
             </View>
             <Svg height={75} width={WIDTH}>
@@ -174,7 +173,7 @@ export default class AnimatedHamburger extends React.Component {
           }
         >
             <Text style={{fontSize: 28, textAlign: 'center', paddingTop: 20}}>Scroll me Up!</Text>
-            <Text style={{fontSize: 28, textAlign: 'center', marginTop: 430}}>Scroll me Down!</Text>
+            <Text style={{fontSize: 28, textAlign: 'center', marginTop: 430, marginBottom: 430}}>Scroll me Down!</Text>
         </ScrollView>
 
       </View>
@@ -193,14 +192,16 @@ const styles = StyleSheet.create({
   menuStyle: {
     position: 'absolute',
     right: 38.5,
+    top: 10,
   },
   topBarStyle: {
     height: 100,
+    top: 10,
   },
   scrollStyle: {
     backgroundColor: "#1989AC",
     flex: 1,
     width: "100%",
-    height: 1000,
+    height: 2000,
   },
 });
